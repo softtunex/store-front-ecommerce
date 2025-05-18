@@ -3,13 +3,7 @@ import mongoose from "mongoose";
 import bcrypt from "bcrypt";
 import crypto from "crypto";
 
-// Create a Counter schema for sequential IDs
-const counterSchema = new mongoose.Schema({
-  _id: { type: String, required: true },
-  seq: { type: Number, default: 0 },
-});
-
-const Counter = mongoose.model("Counter", counterSchema);
+import Counter from "./counterModel.js";
 
 const userSchema = new mongoose.Schema(
   {

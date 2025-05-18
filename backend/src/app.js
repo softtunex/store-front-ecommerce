@@ -9,6 +9,7 @@ import cookieParser from "cookie-parser";
 import authRoutes from "./api/v1/routes/authRoutes.js";
 import userRoutes from "./api/v1/routes/userRoutes.js";
 import roleRoutes from "./api/v1/routes/roleRoutes.js";
+import storeRoutes from "./api/v1/routes/storeRoutes.js";
 
 // Initialize express
 const app = express();
@@ -35,6 +36,7 @@ app.get("/", (req, res) => {
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/users", userRoutes);
 app.use("/api/v1/roles", roleRoutes);
+app.use("/api/v1/stores", storeRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
